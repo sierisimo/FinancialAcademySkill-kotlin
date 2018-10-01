@@ -21,10 +21,4 @@ class FinancialStreamHandler : SkillStreamHandler(
                         SessionEndedRequestHandler()
                 )
                 .build()
-) {
-    companion object : KLogging()
-
-    init {
-        logger.info { "[Alexa] - Running…" }
-    }
-}
+)

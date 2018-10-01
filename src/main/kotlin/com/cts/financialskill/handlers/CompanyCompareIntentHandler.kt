@@ -67,6 +67,4 @@ class CompanyCompareIntentHandler : KLogging(), RequestHandler {
 
         return CompanyValue(companyName, companyId)
     }
-
-    fun Any.inLog(msg: String = "") = logger.error { "[Alexa] - $msg :: $this" }
 }
