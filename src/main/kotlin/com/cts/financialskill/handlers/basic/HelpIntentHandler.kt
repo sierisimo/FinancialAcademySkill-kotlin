@@ -1,20 +1,21 @@
-package com.cts.financialskill
+package com.cts.financialskill.handlers.basic
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput
 import com.amazon.ask.dispatcher.request.handler.RequestHandler
 import com.amazon.ask.model.Response
 import com.amazon.ask.request.Predicates.intentName
+import mu.KLogging
 import java.util.*
 
-class FallbackIntentHandler : RequestHandler {
-    override fun canHandle(input: HandlerInput): Boolean =
-            input.matches(intentName("AMAZON.FallbackIntent"))
+class HelpIntentHandler : KLogging(), RequestHandler {
+    override fun canHandle(input: HandlerInput) = input.matches(intentName("AMAZON.HelpIntent"))
 
     override fun handle(input: HandlerInput): Optional<Response> {
-        val speechText = "Sorry, I don't know that. You can say try saying help! Or Ask Sinuhe for a new feature"
+        logger.info { "[Alexa] - Log happening, $input" }
+        val speechText = "You can say hello to me!"
         return input.responseBuilder
                 .withSpeech(speechText)
-                .withSimpleCard("Unknown", speechText)
+                .withSimpleCard("HelloWorld", speechText)
                 .withReprompt(speechText)
                 .build()
     }
