@@ -1,0 +1,84 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "financial academy",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "cancel"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "stop"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "WelcomeIntent",
+          "samples": [
+            "how are things going",
+            "hi",
+            "hey"
+          ]
+        },
+        {
+          "name": "CompanyIntent",
+          "slots": [
+            {
+              "name": "asset",
+              "type": "AMAZON.Corporation"
+            }
+          ],
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "eth",
+              "name": {
+                "value": "Ethereum"
+              }
+            },
+            {
+              "id": "btc",
+              "name": {
+                "value": "Bitcoin"
+              }
+            },
+            {
+              "id": "FB",
+              "name": {
+                "value": "Facebook"
+              }
+            },
+            {
+              "id": "AMZN",
+              "name": {
+                "value": "Amazon"
+              }
+            }
+          ],
+          "name": "AMAZON.Corporation"
+        }
+      ]
+    }
+  }
+}
